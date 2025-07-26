@@ -8,3 +8,15 @@ spring:
       server:
         git:
           uri: https://github.com/bgCheong/ecommerce-config.git
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker # 'docker' 프로필일 때 아래 설정 활성화
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-container:8761/eureka/
